@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src=""></script>
+    <!-- <link rel="stylesheet" href="Facebook.css"> -->
+    <title>Social Media Integration</title>
+    <style>
+        body {
+            text-align: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    
+        body::after {
+            content: "";
+            background: url('facebook.jpg');
+            background-size: 90vw 90vh;
+            background-repeat: no-repeat;
+            /* background-size: cover; */
+            opacity: 0.7;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            position: absolute;
+            z-index: -1;
+        }
+    
+        div {
+            font-weight: bold;
+            font-size: 30px;
+        }
+    
+        button {
+            height: 50px;
+            width: 70px;
+            font-size: large;
+        }
+    
+        button:hover {
+            background-color: darkgray;
+        }
+        a{
+        text-decoration: none;
+        }
+    </style>
+    </head>
+    
+    <body>
+        <div class="container">
+            <form action=" " class="sign-in">
+                <h3>FACEBOOK</h2>
+                    <div class="">
+                        Username : <input type="text" placeholder="Enter your username">
+                        <div class="inp">
+                            <br>
+                            Password : <input type="password" placeholder="Enter your password">
+                        </div>
+                        <br>
+                        <button><a href="FacebookProfile.html" target="_blank">Login</a></button>
+            </form>
+        </div>
+    </body> 
+    
+    </html>

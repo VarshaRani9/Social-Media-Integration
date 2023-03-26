@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Integration</title>
+    <link rel="stylesheet" href="Home.css">
+    <style>
+        *{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+body{
+    text-align: center;
+    letter-spacing: 3px;
+}
+body::after {
+    content: "";
+    background: url('background.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+  }
+.main-container{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    border:2px solid black;
+}
+.container1{
+    flex-basis:40%;
+    height: 100vh;
+    text-overflow: hidden;
+    color:rgb(7, 7, 100);
+    font-size: 150%;
+    font-weight: bold;
+    padding-top:10%;
+    padding-left: 5%;
+}
+.container2{
+    flex-basis:60%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content:center;
+    align-items:flex-end;
+    row-gap: 10px;
+    padding-right: 10%;
+    padding-bottom: 20%;
+}   
+.fb, .google{
+    display: flex;
+    gap:15px;
+    border: 3px solid black;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+} 
+.fb::before, .google:before{
+    content: '';
+    position: absolute;
+    top:0;
+    left:-100%;
+    width: 100%;
+    height:100%;
+    background-color: gray;
+    z-index: -1;
+    transition:0.4s ease-in;
+}
+.fb:hover::before, .google:hover::before{
+    transform:translateX(100%) rotate(360deg);
+}
+.fb::after, .google:after{
+    content: '';
+    position: absolute;
+    bottom:10px;
+    left: 0;
+    width: 90%;
+    height:1px;
+    transform: translateX(5%) scaleY(0);
+    background-color: rgb(54, 25, 223);
+    z-index: -1;
+    transition:0.8s ease-in;
+}
+.fb:hover::after, .google:hover::after{
+    transform: translateX(5%) scaleY(1);
+}
+a{
+    font-size: 100%;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;    
+}
+.agoogle, .afb{
+    padding-top:14px ;
+    padding-right: 13px;
+}
+
+@media screen and (min-width: 641px){
+    .main-container{
+        width: 100%;
+        flex-direction: row;
+    }
+    .container1{
+        flex-basis: 35%;
+    }
+    .container2{
+        flex-basis: 65%;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="container1">
+            <p>Social media is a computer-based technology that facilitates the sharing of ideas, thoughts, and information through virtual networks and communities. 
+                <br>
+                <br>
+                <br>
+                The largest social media networks include Facebook, google, Instagram, Twitter and YouTube.
+                <br></p>
+        </div>
+        <div class="container2">
+            <div class="fb">
+                <img class="image" src="fb_logo.jpg" height="45px" width="45px">
+                <a href="Facebook.html" target="_blank" class="afb"> Login with Facebook</a>
+            </div>
+            <br> <br>
+            <div class="google">
+                <img class="image" src="google_logo.jpg" height="40px" width="40px">
+                <a href="Google.html" target="_blank" class="agoogle"> Login with google</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

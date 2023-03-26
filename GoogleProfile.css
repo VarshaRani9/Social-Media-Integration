@@ -1,0 +1,140 @@
+*{
+    margin:0;
+    padding:0;
+    color: white;
+    background-color: black;
+}
+.container{
+    display:grid;
+    grid-template-columns: 20% auto 20%;
+    grid-template-areas: 'header header header'
+                         'nav main main'
+                        'foot foot foot';
+}
+.red-box{
+    margin: 8px;
+    padding: 8px;
+    /* border: 2px solid red; */
+    /* height:200px; */
+}
+li{
+list-style: none;
+}
+header{
+ grid-area: header;
+}
+main{
+grid-area: main;
+}
+.navigation{
+    grid-area: nav;
+}
+footer{
+    grid-area: foot;
+}
+
+header{
+    font-size: 20px;
+    display: flex;
+    gap:15%;
+    margin: 5px;
+    /* padding-left: 5px; */
+}
+.google{
+    flex-basis:25%;
+}
+.search{
+    flex-basis: 30%;
+    display: inline;
+}
+.p_id{
+    flex-basis: 5%;
+    /* border: 2px solid purple; */
+    background-color: purple;
+    color: white;
+    text-align: center;
+    border-radius: 50%;
+}
+.v{
+    background-color: purple;
+    color: white;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 50px;
+    
+    /* width:50px; */
+}
+.varsha{
+    font-size:40px;
+}
+.mini-container{
+    display: flex;
+    gap:10px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.mini-container .privacy,.security{
+    border: 1px solid gray;
+    /* gap: 15%; */
+    padding: 8px;
+    border-radius: 4%;
+}
+.privacy{
+    flex-basis: 45%;
+}
+.security{
+    flex-basis: 45%;
+}
+.head{
+    font-weight: bold;
+    font-size: 25px;
+    padding: 3px;
+}
+.foot{
+    color: blue;
+    padding: 4px;
+    border-top: 1px solid gray;
+}
+.one{
+   color: rgb(7, 7, 247);
+}
+.Two{
+    color: red;
+ }
+ .Three{
+    color: rgb(190, 190, 14);
+ }
+ .Four{
+    color: blue;
+ }
+ .Five{
+    color: green;
+ }
+ .Six{
+    color: red;
+ }
+
+.navigation{
+  font-size: 20px;
+  line-height: 35px;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+
+@media screen and (min-width: 641px){
+    .mini-container{
+        width: 70%;
+        flex-direction: column;
+    }
+    .privacy{
+        flex-basis: 35%;
+    }
+    .security{
+        flex-basis: 65%;
+    } 
+}
